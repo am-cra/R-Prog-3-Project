@@ -1,6 +1,6 @@
 * Clone this repository to your local computer (say under your home directory)
 
-* Change your working directory to the repository directory, e.g. (in RStudio) _setwd("~/Coursera/R-Prog-3-Project")_
+* Change your working directory to the repository directory, e.g. (in RStudio) _setwd("~/R-Prog-3-Project")_
 
 * Source the script: _source("run_analysis.R")_
 
@@ -12,7 +12,7 @@ Alternatively:
 
 * Download the script _run_analysis.R_ to the same directory
 
-* Set your working directory to  _~/R-Prog-3-Project/_. For example, in RStudio: _setwd("~/Coursera/R-Prog-3-Project")_.
+* Set your working directory to  _~/R-Prog-3-Project/_. For example, in RStudio: _setwd("~/R-Prog-3-Project")_.
 
 * Source the script: _source("run_analysis.R")_
 
