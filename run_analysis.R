@@ -37,20 +37,20 @@ write.table(cleaned_data, "cleaned_data.txt")
 
 # 5. Creates a second, tidy data set with the average of each variable for each activity and each subject.
 
-uniqueSubjects = unique(S)[,1]
-numSubjects = length(unique(S)[,1])
-numActivities = length(activities[,1])
-numCols = dim(cleaned)[2]
-result = cleaned[1:(numSubjects*numActivities), ]
+uniqueSubjects <- unique(S)[,1]
+numSubjects <- length(unique(S)[,1])
+numActivities <- length(activities[,1])
+numCols <- dim(cleaned)[2]
+result <- cleaned[1:(numSubjects*numActivities), ]
 
-row = 1
+row <- 1
 for (s in 1:numSubjects) {
   for (a in 1:numActivities) {
-    result[row, 1] = uniqueSubjects[s]
-    result[row, 2] = activities[a, 2]
+    result[row, 1] <- uniqueSubjects[s]
+    result[row, 2] <- activities[a, 2]
     tmp <- cleaned[cleaned$subject==s & cleaned$activity==activities[a, 2], ]
     result[row, 3:numCols] <- colMeans(tmp[, 3:numCols])
-    row = row+1
+    row <- row+1
   }
 }
 write.table(result, "average_data.txt", row.names=FALSE)
